@@ -18,7 +18,7 @@ import {
   isSshTunnelHealthy,
   startSshTunnel,
 } from "./ssh-tunnel";
-import { stripAnsi } from "./utils";
+import { pidIsAliveAs, stripAnsi } from "./utils";
 import { readModels } from "./models";
 import { HIDDEN_SUBPROCESS_OPTIONS } from "./process-options";
 import {
@@ -952,16 +952,16 @@ export function stopGateway(force = false): void {
   apiServerAvailable = false;
 }
 
+// Python image prefixes covering both native Windows (pythonw.exe / python.exe)
+// and POSIX (python, python3, pythonw). Used to verify the PID we read from
+// gateway.pid actually belongs to a python process before reporting alive.
+const GATEWAY_IMAGE_PREFIXES = ["python", "pythonw"];
+
 export function isGatewayRunning(): boolean {
   if (gatewayProcess && !gatewayProcess.killed) return true;
   const pid = readPidFile();
   if (!pid) return false;
-  try {
-    process.kill(pid, 0);
-    return true;
-  } catch {
-    return false;
-  }
+  return pidIsAliveAs(pid, GATEWAY_IMAGE_PREFIXES);
 }
 
 export function isApiReady(): boolean {
