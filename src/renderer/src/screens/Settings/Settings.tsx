@@ -12,7 +12,8 @@ const LANGUAGE_NATIVE_NAMES: Record<AppLocale, string> = {
   es: "Español",
   id: "Bahasa Indonesia",
   ja: "日本語",
-  "pt-BR": "Português",
+  "pt-BR": "Português (BR)",
+  "pt-PT": "Português (PT)",
   "zh-CN": "简体中文",
   "zh-TW": "繁體中文（台灣）",
 };

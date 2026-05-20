@@ -146,6 +146,26 @@ import soulPt from "./locales/pt-BR/soul";
 import memoryPt from "./locales/pt-BR/memory";
 import installPt from "./locales/pt-BR/install";
 import constantsPt from "./locales/pt-BR/constants";
+import commonPtPt from "./locales/pt-PT/common";
+import navigationPtPt from "./locales/pt-PT/navigation";
+import welcomePtPt from "./locales/pt-PT/welcome";
+import setupPtPt from "./locales/pt-PT/setup";
+import chatPtPt from "./locales/pt-PT/chat";
+import settingsPtPt from "./locales/pt-PT/settings";
+import toolsPtPt from "./locales/pt-PT/tools";
+import sessionsPtPt from "./locales/pt-PT/sessions";
+import modelsPtPt from "./locales/pt-PT/models";
+import providersPtPt from "./locales/pt-PT/providers";
+import officePtPt from "./locales/pt-PT/office";
+import errorsPtPt from "./locales/pt-PT/errors";
+import schedulesPtPt from "./locales/pt-PT/schedules";
+import skillsPtPt from "./locales/pt-PT/skills";
+import gatewayPtPt from "./locales/pt-PT/gateway";
+import agentsPtPt from "./locales/pt-PT/agents";
+import soulPtPt from "./locales/pt-PT/soul";
+import memoryPtPt from "./locales/pt-PT/memory";
+import installPtPt from "./locales/pt-PT/install";
+import constantsPtPt from "./locales/pt-PT/constants";
 
 export const resources = {
   en: {
@@ -290,6 +310,30 @@ export const resources = {
       memory: memoryPt,
       install: installPt,
       constants: constantsPt,
+    },
+  },
+  "pt-PT": {
+    translation: {
+      common: commonPtPt,
+      navigation: navigationPtPt,
+      welcome: welcomePtPt,
+      setup: setupPtPt,
+      chat: chatPtPt,
+      settings: settingsPtPt,
+      tools: toolsPtPt,
+      sessions: sessionsPtPt,
+      models: modelsPtPt,
+      providers: providersPtPt,
+      office: officePtPt,
+      errors: errorsPtPt,
+      schedules: schedulesPtPt,
+      skills: skillsPtPt,
+      gateway: gatewayPtPt,
+      agents: agentsPtPt,
+      soul: soulPtPt,
+      memory: memoryPtPt,
+      install: installPtPt,
+      constants: constantsPtPt,
     },
   },
   ja: {
