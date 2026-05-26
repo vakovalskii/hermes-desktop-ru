@@ -62,4 +62,4 @@ npmRebuild: false
 publish:
   provider: github
   owner: vakovalskii
-  repo: hermes-desktop
+  repo: hermes-desktop-ru

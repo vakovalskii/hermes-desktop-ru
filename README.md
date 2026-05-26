@@ -1,17 +1,13 @@
 <img width="100%" alt="HERMES DESKTOP" src="previews/header.webp" />
 
+> **Russian-language fork** of [fathah/hermes-desktop](https://github.com/fathah/hermes-desktop) (MIT, © github.com/fathah) — rebranded for RU users with built-in support for [NeuralDeep Hub](https://hub.neuraldeep.ru), [Bitrix VibeCode](https://vibecode.bitrix24.tech), and planned providers (GigaChat, YandexGPT). Localized UI, RU-first defaults. Original LICENSE preserved unchanged.
+
 <br/>
 <p align="center">
   <a href="https://hermes-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge" alt="Documentation"></a>
-  <a href="https://t.me/hermes_agent_desktop"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
-  <a href="https://github.com/fathah/hermes-desktop/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
-  <a href="https://hermesagents.cc/"><img src="https://img.shields.io/badge/Download-Releases-FF6600?style=for-the-badge" alt="Releases"></a>
-<a href="https://github.com/fathah/hermes-desktop/stargazers">
-  <img src="https://img.shields.io/github/stars/fathah/hermes-desktop?style=for-the-badge&color=FFD700&label=Stars" alt="Stars">
-</a>
-  <a href="https://github.com/fathah/hermes-desktop/releases/">
-  <img src="https://img.shields.io/github/downloads/fathah/hermes-desktop/total?style=for-the-badge&color=00B496&label=Total%20Downloads" alt="Downloads">
-</a>
+  <a href="https://github.com/vakovalskii/hermes-desktop-ru/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://github.com/vakovalskii/hermes-desktop-ru/releases/"><img src="https://img.shields.io/badge/Download-Releases-FF6600?style=for-the-badge" alt="Releases"></a>
+  <a href="https://github.com/vakovalskii/hermes-desktop-ru/stargazers"><img src="https://img.shields.io/github/stars/vakovalskii/hermes-desktop-ru?style=for-the-badge&color=FFD700&label=Stars" alt="Stars"></a>
 </p>
 
 > **This project is in active development.** Features may change, and some things might break. If you run into a problem or have an idea, [open an issue](https://github.com/fathah/hermes-desktop/issues). Contributions are welcome!
