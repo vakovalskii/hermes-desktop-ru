@@ -4,7 +4,7 @@
 // installer URL, and SHA256 of the NSIS installer in dist/, and writes
 // the result under dist/winget/manifests/n/NousResearch/HermesDesktop/<version>/.
 //
-// Run from CLI: VERSION=0.2.3 PUBLISH_OWNER=fathah node scripts/generate-winget-manifests.mjs
+// Run from CLI: VERSION=0.2.3 PUBLISH_OWNER=vakovalskii node scripts/generate-winget-manifests.mjs
 // Or import as ESM and call generateWingetManifests({ rootDir, version, name, publishOwner }).
 
 import { createHash } from "node:crypto";
@@ -32,8 +32,8 @@ export function generateWingetManifests({
     .digest("hex")
     .toUpperCase();
   const releaseDate = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-  const installerUrl = `https://github.com/${publishOwner}/hermes-desktop/releases/download/v${version}/${name}-${version}-setup.exe`;
-  const releaseNotesUrl = `https://github.com/${publishOwner}/hermes-desktop/releases/tag/v${version}`;
+  const installerUrl = `https://github.com/${publishOwner}/hermes-desktop-ru/releases/download/v${version}/${name}-${version}-setup.exe`;
+  const releaseNotesUrl = `https://github.com/${publishOwner}/hermes-desktop-ru/releases/tag/v${version}`;
 
   const replacements = {
     VERSION: version,
@@ -96,7 +96,7 @@ if (isCli) {
     rootDir,
     version: process.env.VERSION || pkg.version,
     name: pkg.name,
-    publishOwner: process.env.PUBLISH_OWNER || "fathah",
+    publishOwner: process.env.PUBLISH_OWNER || "vakovalskii",
   });
   console.log(`Winget manifests generated in ${result.outDir}`);
   console.log(`InstallerSha256: ${result.sha256}`);
