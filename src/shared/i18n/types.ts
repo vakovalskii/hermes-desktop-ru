@@ -5,6 +5,7 @@ export type AppLocale =
   | "ja"
   | "pt-BR"
   | "pt-PT"
+  | "ru"
   | "zh-CN"
   | "zh-TW";
 

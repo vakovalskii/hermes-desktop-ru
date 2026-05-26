@@ -10,6 +10,7 @@ export const APP_LOCALES: AppLocale[] = [
   "ja",
   "pt-BR",
   "pt-PT",
+  "ru",
   "zh-CN",
   "zh-TW",
 ];

@@ -1,0 +1,23 @@
+export default {
+  title: "Профили",
+  subtitle:
+    "Каждый профиль — изолированное рабочее пространство Hermes со своей конфигурацией, памятью и навыками",
+  newAgent: "Новый агент",
+  namePlaceholder: "Имя агента (напр. coder)",
+  cloneConfig: "Скопировать конфиг и API-ключи из default",
+  createFailed: "Не удалось создать профиль",
+  creating: "Создание...",
+  create: "Создать",
+  active: "Активный",
+  noModel: "Модель не задана",
+  skillsCount: "{{count}} навыков",
+  gatewayRunning: "Шлюз работает",
+  gatewayOff: "Шлюз выключен",
+  chat: "Чат",
+  deleteConfirm: "Удалить?",
+  yes: "Да",
+  no: "Нет",
+  deleteTitle: "Удалить агента",
+  auto: "Авто",
+  local: "Локально",
+} as const;

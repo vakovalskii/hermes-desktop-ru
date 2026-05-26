@@ -1,0 +1,16 @@
+export default {
+  title: "Сессии",
+  searchPlaceholder: "Поиск по беседам...",
+  noResults: "Ничего не найдено",
+  noResultsHint: "Попробуйте другие условия поиска",
+  empty: "Сессий пока нет",
+  newConversation: "Новая беседа",
+  newChat: "Новый чат",
+  today: "Сегодня",
+  yesterday: "Вчера",
+  thisWeek: "На этой неделе",
+  earlier: "Раньше",
+  emptyHint: "Начните общаться, чтобы создать первую сессию",
+  messages: "сообщ.",
+  messageSingular: "сообщ.",
+} as const;
