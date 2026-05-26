@@ -61,5 +61,5 @@ rpm:
 npmRebuild: false
 publish:
   provider: github
-  owner: fathah
+  owner: vakovalskii
   repo: hermes-desktop
