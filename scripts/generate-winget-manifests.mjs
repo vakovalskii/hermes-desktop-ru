@@ -18,7 +18,13 @@ export function generateWingetManifests({
   version,
   name,
   publishOwner,
+  // Repo slug on GitHub — distinct from `name` because the npm package /
+  // installer binary is still "hermes-desktop" while the canonical home
+  // moved to "hermes-desktop-ru". Defaults to `name` for backward compat
+  // with any older callers that only passed `name`.
+  repoName,
 }) {
+  const repo = repoName || name;
   const exePath = join(rootDir, "dist", `${name}-${version}-setup.exe`);
   if (!existsSync(exePath)) {
     throw new Error(
@@ -32,8 +38,8 @@ export function generateWingetManifests({
     .digest("hex")
     .toUpperCase();
   const releaseDate = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-  const installerUrl = `https://github.com/${publishOwner}/hermes-desktop-ru/releases/download/v${version}/${name}-${version}-setup.exe`;
-  const releaseNotesUrl = `https://github.com/${publishOwner}/hermes-desktop-ru/releases/tag/v${version}`;
+  const installerUrl = `https://github.com/${publishOwner}/${repo}/releases/download/v${version}/${name}-${version}-setup.exe`;
+  const releaseNotesUrl = `https://github.com/${publishOwner}/${repo}/releases/tag/v${version}`;
 
   const replacements = {
     VERSION: version,
@@ -97,6 +103,7 @@ if (isCli) {
     version: process.env.VERSION || pkg.version,
     name: pkg.name,
     publishOwner: process.env.PUBLISH_OWNER || "vakovalskii",
+    repoName: process.env.PUBLISH_REPO || "hermes-desktop-ru",
   });
   console.log(`Winget manifests generated in ${result.outDir}`);
   console.log(`InstallerSha256: ${result.sha256}`);

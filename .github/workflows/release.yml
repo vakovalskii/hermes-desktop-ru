@@ -237,6 +237,7 @@ jobs:
         env:
           VERSION: ${{ needs.prepare.outputs.version }}
           PUBLISH_OWNER: vakovalskii
+          PUBLISH_REPO: hermes-desktop-ru
         run: node scripts/generate-winget-manifests.mjs
 
       - name: Upload winget manifests artifact
