@@ -120,6 +120,9 @@ function detectBrand(provider?: string, modelId?: string): BrandKey {
   // (currently the fallback bot icon) rather than the upstream model's
   // logo, since the user picked the Hub as their provider.
   if (/neuraldeep/.test(haystack)) return "unknown";
+  // Bitrix VibeCode — same idea: branded under the aggregator, not the
+  // underlying model.
+  if (/(vibecode|bitrix)/.test(haystack)) return "unknown";
   if (/(claude|anthropic)/.test(haystack)) return "claude";
   if (/(gemini|google)/.test(haystack)) return "gemini";
   if (/(gpt|openai)/.test(haystack)) return "openai";

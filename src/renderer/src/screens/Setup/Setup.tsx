@@ -38,6 +38,7 @@ function Setup({
     const preset = LOCAL_PRESETS.find((p) => p.baseUrl === url);
     if (preset?.envKey) return preset.envKey;
     if (/api\.neuraldeep\.ru/i.test(url)) return "NEURALDEEP_API_KEY";
+    if (/vibecode\.bitrix24\.tech/i.test(url)) return "BITRIX_VIBECODE_API_KEY";
     if (/openrouter\.ai/i.test(url)) return "OPENROUTER_API_KEY";
     if (/anthropic\.com/i.test(url)) return "ANTHROPIC_API_KEY";
     if (/openai\.com/i.test(url)) return "OPENAI_API_KEY";

@@ -5,6 +5,9 @@ export default {
   neuraldeepName: "NeuralDeep Hub",
   neuraldeepDesc: "OSS models via api.neuraldeep.ru",
   neuraldeepTag: "RU",
+  vibecodeName: "Bitrix VibeCode",
+  vibecodeDesc: "Free BitrixGPT 5.5 + AI router",
+  vibecodeTag: "RU",
   openrouterName: "OpenRouter",
   openrouterDesc: "200+ models",
   openrouterTag: "",
@@ -50,6 +53,8 @@ export default {
   // Settings field labels
   neuraldeepApiKey: "NeuralDeep Hub API Key",
   neuraldeepHint: "OSS models via api.neuraldeep.ru (get a key at hub.neuraldeep.ru/app)",
+  vibecodeApiKey: "Bitrix VibeCode API Key",
+  vibecodeHint: "Free BitrixGPT 5.5 via vibecode.bitrix24.tech (sign in to get a vibe_app_... key)",
   openrouterApiKey: "OpenRouter API Key",
   openrouterHint: "200+ models via OpenRouter (recommended)",
   openaiApiKey: "OpenAI API Key",

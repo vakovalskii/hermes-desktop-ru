@@ -35,6 +35,16 @@ const DEFAULT_MODELS: DefaultModel[] = [
     baseUrl: "https://api.neuraldeep.ru/v1",
   },
 
+  // ── Bitrix VibeCode (free BitrixGPT, OpenAI-compatible) ──────────────
+  // https://vibecode.bitrix24.tech — X-Api-Key OR Authorization: Bearer.
+  // Routed via `custom` because hermes-agent doesn't know "vibecode".
+  {
+    name: "BitrixGPT 5.5 (VibeCode)",
+    provider: "custom",
+    model: "bitrix/bitrixgpt-5.5",
+    baseUrl: "https://vibecode.bitrix24.tech/v1",
+  },
+
   // ── OpenRouter (200+ models via single API key) ──────────────────────
   {
     name: "Claude Sonnet 4",

@@ -25,6 +25,7 @@ export const PROVIDERS = {
     // Aggregators
     { value: "openrouter", label: "constants.openrouterName" },
     { value: "neuraldeep", label: "constants.neuraldeepName" },
+    { value: "vibecode", label: "constants.vibecodeName" },
     // First-party API providers
     { value: "anthropic", label: "constants.anthropicName" },
     { value: "openai", label: "constants.openaiName" },
@@ -59,6 +60,7 @@ export const PROVIDERS = {
   labels: {
     openrouter: "constants.openrouterName",
     neuraldeep: "constants.neuraldeepName",
+    vibecode: "constants.vibecodeName",
     anthropic: "constants.anthropicName",
     openai: "constants.openaiName",
     "openai-codex": "constants.openaiCodexName",
@@ -100,6 +102,22 @@ export const PROVIDERS = {
       // src/main/hermes.ts.
       configProvider: "custom",
       baseUrl: "https://api.neuraldeep.ru/v1",
+      needsKey: true,
+    },
+    {
+      id: "vibecode",
+      name: "constants.vibecodeName",
+      desc: "constants.vibecodeDesc",
+      tag: "constants.vibecodeTag",
+      envKey: "BITRIX_VIBECODE_API_KEY",
+      url: "https://vibecode.bitrix24.tech/auth/login",
+      placeholder: "vibe_app_...",
+      // Bitrix24 VibeCode is OpenAI-compatible at /v1/chat/completions and
+      // accepts both `X-Api-Key` and `Authorization: Bearer`. Routed through
+      // `custom` for the same reason as NeuralDeep — hermes-agent doesn't
+      // know this provider id, but URL_KEY_MAP picks up the key by host.
+      configProvider: "custom",
+      baseUrl: "https://vibecode.bitrix24.tech/v1",
       needsKey: true,
     },
     {
@@ -338,6 +356,12 @@ export const SETTINGS_SECTIONS: SectionDef[] = [
         label: "constants.neuraldeepApiKey",
         type: "password",
         hint: "constants.neuraldeepHint",
+      },
+      {
+        key: "BITRIX_VIBECODE_API_KEY",
+        label: "constants.vibecodeApiKey",
+        type: "password",
+        hint: "constants.vibecodeHint",
       },
       {
         key: "OPENROUTER_API_KEY",
