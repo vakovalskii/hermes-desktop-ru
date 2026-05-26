@@ -19,7 +19,7 @@ function Setup({
   onDismissVerifyWarning,
 }: SetupProps): React.JSX.Element {
   const { t } = useI18n();
-  const [selectedProvider, setSelectedProvider] = useState("openrouter");
+  const [selectedProvider, setSelectedProvider] = useState("neuraldeep");
   const [apiKey, setApiKey] = useState("");
   const [baseUrl, setBaseUrl] = useState("http://localhost:1234/v1");
   const [modelName, setModelName] = useState("");
@@ -37,6 +37,7 @@ function Setup({
   function resolveCustomEnvKey(url: string): string {
     const preset = LOCAL_PRESETS.find((p) => p.baseUrl === url);
     if (preset?.envKey) return preset.envKey;
+    if (/api\.neuraldeep\.ru/i.test(url)) return "NEURALDEEP_API_KEY";
     if (/openrouter\.ai/i.test(url)) return "OPENROUTER_API_KEY";
     if (/anthropic\.com/i.test(url)) return "ANTHROPIC_API_KEY";
     if (/openai\.com/i.test(url)) return "OPENAI_API_KEY";

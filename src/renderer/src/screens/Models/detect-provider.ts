@@ -11,6 +11,7 @@ export function detectProviderFromUrl(rawUrl: string): string | null {
   if (!url) return null;
 
   // Hosted providers — match by hostname.
+  if (/(^|\/\/)api\.neuraldeep\.ru(\/|:|$)/.test(url)) return "neuraldeep";
   if (/(^|\/\/)openrouter\.ai(\/|:|$)/.test(url)) return "openrouter";
   if (/(^|\/\/)api\.anthropic\.com(\/|:|$)/.test(url)) return "anthropic";
   if (/(^|\/\/)api\.openai\.com(\/|:|$)/.test(url)) return "openai";

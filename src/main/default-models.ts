@@ -18,6 +18,23 @@ export interface DefaultModel {
 }
 
 const DEFAULT_MODELS: DefaultModel[] = [
+  // ── NeuralDeep Hub (RU OSS aggregator, https://hub.neuraldeep.ru) ────
+  // OpenAI-compatible at api.neuraldeep.ru/v1. Routed through `custom`
+  // because hermes-agent's resolve_provider doesn't know "neuraldeep" —
+  // the NEURALDEEP_API_KEY is picked up via URL_KEY_MAP in hermes.ts.
+  {
+    name: "GPT-OSS 120B (NeuralDeep)",
+    provider: "custom",
+    model: "gpt-oss-120b",
+    baseUrl: "https://api.neuraldeep.ru/v1",
+  },
+  {
+    name: "Qwen3.6 35B A3B (NeuralDeep)",
+    provider: "custom",
+    model: "qwen3.6-35b-a3b",
+    baseUrl: "https://api.neuraldeep.ru/v1",
+  },
+
   // ── OpenRouter (200+ models via single API key) ──────────────────────
   {
     name: "Claude Sonnet 4",

@@ -13,6 +13,7 @@
  * user-defined entries) falls back to caller-supplied baseUrl.
  */
 export const PROVIDER_BASE_URLS: Record<string, string> = {
+  neuraldeep: "https://api.neuraldeep.ru/v1",
   openai: "https://api.openai.com/v1",
   openrouter: "https://openrouter.ai/api/v1",
   deepseek: "https://api.deepseek.com/v1",

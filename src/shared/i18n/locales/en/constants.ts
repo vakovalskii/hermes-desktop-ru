@@ -2,6 +2,9 @@ export default {
   // Provider labels
   autoDetect: "Auto-detect",
   // Provider setup cards
+  neuraldeepName: "NeuralDeep Hub",
+  neuraldeepDesc: "OSS models via api.neuraldeep.ru",
+  neuraldeepTag: "RU",
   openrouterName: "OpenRouter",
   openrouterDesc: "200+ models",
   openrouterTag: "",
@@ -45,6 +48,8 @@ export default {
   sectionVoiceStt: "Voice & STT",
   sectionResearchTraining: "Research & Training",
   // Settings field labels
+  neuraldeepApiKey: "NeuralDeep Hub API Key",
+  neuraldeepHint: "OSS models via api.neuraldeep.ru (get a key at hub.neuraldeep.ru/app)",
   openrouterApiKey: "OpenRouter API Key",
   openrouterHint: "200+ models via OpenRouter (recommended)",
   openaiApiKey: "OpenAI API Key",

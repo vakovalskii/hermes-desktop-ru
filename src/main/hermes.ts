@@ -157,6 +157,7 @@ const OPENAI_COMPAT_PROVIDERS = new Set([
 
 // Map base-URL patterns to the API key env var they need
 const URL_KEY_MAP: Array<{ pattern: RegExp; envKey: string }> = [
+  { pattern: /api\.neuraldeep\.ru/i, envKey: "NEURALDEEP_API_KEY" },
   { pattern: /openrouter\.ai/i, envKey: "OPENROUTER_API_KEY" },
   { pattern: /anthropic\.com/i, envKey: "ANTHROPIC_API_KEY" },
   { pattern: /openai\.com/i, envKey: "OPENAI_API_KEY" },

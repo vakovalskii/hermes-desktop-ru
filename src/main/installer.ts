@@ -281,6 +281,7 @@ function activeAuthFile(profile: string): string {
 // "set AI provider" first-run screen even with a valid key in .env.
 // See issue #236.
 const PROVIDER_ENV_KEYS: Record<string, string> = {
+  neuraldeep: "NEURALDEEP_API_KEY",
   openrouter: "OPENROUTER_API_KEY",
   anthropic: "ANTHROPIC_API_KEY",
   openai: "OPENAI_API_KEY",
@@ -306,6 +307,7 @@ const PROVIDER_ENV_KEYS: Record<string, string> = {
 // back to recognizing the endpoint by base URL. Same patterns hermes.ts
 // uses for runtime header injection.
 const URL_TO_ENV_KEY: Array<[RegExp, string]> = [
+  [/api\.neuraldeep\.ru/i, "NEURALDEEP_API_KEY"],
   [/openrouter\.ai/i, "OPENROUTER_API_KEY"],
   [/anthropic\.com/i, "ANTHROPIC_API_KEY"],
   [/openai\.com/i, "OPENAI_API_KEY"],

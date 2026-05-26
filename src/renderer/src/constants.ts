@@ -24,6 +24,7 @@ export const PROVIDERS = {
     { value: "auto", label: "constants.autoDetect" },
     // Aggregators
     { value: "openrouter", label: "constants.openrouterName" },
+    { value: "neuraldeep", label: "constants.neuraldeepName" },
     // First-party API providers
     { value: "anthropic", label: "constants.anthropicName" },
     { value: "openai", label: "constants.openaiName" },
@@ -57,6 +58,7 @@ export const PROVIDERS = {
 
   labels: {
     openrouter: "constants.openrouterName",
+    neuraldeep: "constants.neuraldeepName",
     anthropic: "constants.anthropicName",
     openai: "constants.openaiName",
     "openai-codex": "constants.openaiCodexName",
@@ -84,6 +86,22 @@ export const PROVIDERS = {
   } as Record<string, string>,
 
   setup: [
+    {
+      id: "neuraldeep",
+      name: "constants.neuraldeepName",
+      desc: "constants.neuraldeepDesc",
+      tag: "constants.neuraldeepTag",
+      envKey: "NEURALDEEP_API_KEY",
+      url: "https://hub.neuraldeep.ru/app",
+      placeholder: "nd-...",
+      // hermes-agent's `resolve_provider` doesn't know "neuraldeep" — same
+      // story as OpenAI (#294). Route through the `custom` provider with an
+      // explicit base_url and the key is matched via URL_KEY_MAP in
+      // src/main/hermes.ts.
+      configProvider: "custom",
+      baseUrl: "https://api.neuraldeep.ru/v1",
+      needsKey: true,
+    },
     {
       id: "openrouter",
       name: "constants.openrouterName",
@@ -315,6 +333,12 @@ export const SETTINGS_SECTIONS: SectionDef[] = [
   {
     title: "constants.sectionLlmProviders",
     items: [
+      {
+        key: "NEURALDEEP_API_KEY",
+        label: "constants.neuraldeepApiKey",
+        type: "password",
+        hint: "constants.neuraldeepHint",
+      },
       {
         key: "OPENROUTER_API_KEY",
         label: "constants.openrouterApiKey",

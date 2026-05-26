@@ -116,6 +116,10 @@ const LOGOS: Record<Exclude<BrandKey, "unknown">, string> = {
 
 function detectBrand(provider?: string, modelId?: string): BrandKey {
   const haystack = `${provider || ""} ${modelId || ""}`.toLowerCase();
+  // NeuralDeep Hub aggregates OSS models — show its own brand chip
+  // (currently the fallback bot icon) rather than the upstream model's
+  // logo, since the user picked the Hub as their provider.
+  if (/neuraldeep/.test(haystack)) return "unknown";
   if (/(claude|anthropic)/.test(haystack)) return "claude";
   if (/(gemini|google)/.test(haystack)) return "gemini";
   if (/(gpt|openai)/.test(haystack)) return "openai";
