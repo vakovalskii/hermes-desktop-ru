@@ -37,7 +37,12 @@ mac:
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
   hardenedRuntime: true
   gatekeeperAssess: false
-  notarize: true
+  # Temporarily disabled: Apple notarytool returns 403 "A required
+  # agreement is missing or has expired" until the Account Holder accepts
+  # the updated Apple Developer Program License Agreement at
+  # developer.apple.com/account. Builds are still Developer-ID signed.
+  # Flip back to `true` once the agreement is in effect.
+  notarize: false
 dmg:
   artifactName: ${name}-${version}-${arch}.${ext}
 linux:
