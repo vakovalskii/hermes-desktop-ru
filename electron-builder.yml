@@ -37,7 +37,11 @@ mac:
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
   hardenedRuntime: true
   gatekeeperAssess: false
-  notarize: true
+  # Free Apps agreement accepted 2026-05-27 but Apple's notary backend
+  # lags agreement propagation by hours — notarytool still 403s. Builds
+  # stay Developer-ID signed; flip back to true once notarization clears
+  # (re-run the Release dry-run to confirm).
+  notarize: false
 dmg:
   artifactName: ${name}-${version}-${arch}.${ext}
 linux:
